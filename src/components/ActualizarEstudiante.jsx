@@ -19,24 +19,41 @@ const ActualizarEstudiante = ({
   };
 
   return (
-    <div>
+    <div className="container">
+      <hr></hr>
       <h2>Actualizar Estudiante</h2>
       <form onSubmit={submit}>
-        <input
-          type="text"
-          value={updatedStudentName}
-          onChange={(e) => setUpdatedStudentName(e.target.value)}
-          placeholder="Ingrese el nuevo nombre del estudiante"
-          required
-        />
-        <input
-          type="number"
-          value={updatedStudentAge}
-          onChange={(e) => setUpdatedStudentAge(e.target.value)}
-          placeholder="Ingrese la nueva edad del estudiante"
-          required
-        />
-        <button type="submit">Actualizar Estudiante</button>
+        <div className="mb-3">
+          <label htmlFor="updatedName" className="form-label">
+            Nombre:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="updatedName"
+            value={updatedStudentName}
+            onChange={(e) => setUpdatedStudentName(e.target.value)}
+            placeholder="Ingrese el nuevo nombre del estudiante"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="updatedAge" className="form-label">
+            Edad:
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id="updatedAge"
+            value={updatedStudentAge}
+            onChange={(e) => setUpdatedStudentAge(e.target.value)}
+            placeholder="Ingrese la nueva edad del estudiante"
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary mb-5">
+          Actualizar Estudiante
+        </button>
       </form>
     </div>
   );

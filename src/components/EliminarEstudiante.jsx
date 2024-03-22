@@ -12,7 +12,11 @@ const EliminarEstudiante = ({ studentId, onDelete }) => {
     }
   };
 
-  return <button onClick={handleDelete}>Eliminar</button>;
+  return (
+    <button onClick={handleDelete} className="btn btn-danger">
+      Eliminar
+    </button>
+  );
 };
 
 export default EliminarEstudiante;

@@ -68,8 +68,8 @@ const App = () => {
   };
 
   return (
-    <div>
-      <h2>CRUD Estudiantes</h2>
+    <div className="mt-3">
+      <h2 className="text-center">CRUD Estudiantes</h2>
       <AgregarEstudiante
         newStudentName={newStudentName}
         setNewStudentName={setNewStudentName}

@@ -13,24 +13,41 @@ const AgregarEstudiante = ({
   };
 
   return (
-    <div>
-      <h3>Agregar Estudiante</h3>
+    <div className="container">
+      <hr></hr>
+      <h3 className="mb-3">Agregar Estudiante</h3>
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={newStudentName}
-          onChange={(e) => setNewStudentName(e.target.value)}
-          placeholder="Ingrese el nombre del estudiante"
-          required
-        />
-        <input
-          type="number"
-          value={newStudentAge}
-          onChange={(e) => setNewStudentAge(e.target.value)}
-          placeholder="Ingrese la edad del estudiante"
-          required
-        />
-        <button type="submit">Agregar Estudiante</button>
+        <div className="mb-3">
+          <label htmlFor="newName" className="form-label">
+            Nombre:
+          </label>
+          <input
+            type="text"
+            className="form-control"
+            id="newName"
+            value={newStudentName}
+            onChange={(e) => setNewStudentName(e.target.value)}
+            placeholder="Ingrese el nombre del estudiante"
+            required
+          />
+        </div>
+        <div className="mb-3">
+          <label htmlFor="newAge" className="form-label">
+            Edad:
+          </label>
+          <input
+            type="number"
+            className="form-control"
+            id="newAge"
+            value={newStudentAge}
+            onChange={(e) => setNewStudentAge(e.target.value)}
+            placeholder="Ingrese la edad del estudiante"
+            required
+          />
+        </div>
+        <button type="submit" className="btn btn-primary">
+          Agregar Estudiante
+        </button>
       </form>
     </div>
   );
